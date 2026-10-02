@@ -19,8 +19,6 @@ body:
       label: 💡 설정 목적
       description: 해당 설정이 필요한 이유를 작성해 주세요.
       placeholder: 해당 설정이 프로젝트에 왜 필요한지 작성해 주세요.
-    validations:
-      required: true
 
   - type: textarea
     id: tasks

@@ -19,8 +19,6 @@ body:
       label: 💡 리팩토링 이유
       description: 해당 부분을 개선하려는 이유를 작성해 주세요.
       placeholder: 코드 중복, 책임 분리, 가독성 저하 등 개선이 필요한 이유를 작성해 주세요.
-    validations:
-      required: true
 
   - type: textarea
     id: tasks
