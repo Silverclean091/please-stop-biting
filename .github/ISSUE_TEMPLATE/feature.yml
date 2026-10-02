@@ -1,0 +1,46 @@
+name: "🚀 Feature"
+description: "새로운 기능을 개발합니다."
+title: "[Feature] "
+labels: ["🚀 Feature"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 📄 설명
+      description: 구현하려는 기능과 필요한 이유를 작성해 주세요.
+      placeholder: 어떤 기능을 왜 구현하려는지 작성해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: ✅ 작업할 내용
+      description: 구현해야 할 작업을 체크리스트 형태로 작성해 주세요.
+      placeholder: |
+        - [ ] 작업 1
+        - [ ] 작업 2
+        - [ ] 작업 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: completion
+    attributes:
+      label: 🎯 완료 조건
+      description: 공통 완료 조건을 확인하고, 기능별 완료 조건을 추가해 주세요.
+      value: |
+        - [ ] 요구사항에 맞게 기능이 정상적으로 동작한다.
+        - [ ] 기존 기능에 영향을 주지 않는다.
+        - [ ] 직접 실행하여 정상 동작을 확인했다.
+        - [ ] 불필요한 디버그 코드 및 로그를 제거했다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: 🙋 참고 자료
+      description: 참고할 자료나 관련 링크가 있다면 작성해 주세요.
+      placeholder: 관련 문서, 링크, 이미지 등을 작성해 주세요.

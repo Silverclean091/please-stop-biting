@@ -1,0 +1,55 @@
+name: "⚙️ Settings"
+description: "개발 환경 및 프로젝트 설정을 추가하거나 변경합니다."
+title: "[Settings] "
+labels: ["⚙️ Settings"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: ⚙️ 설정 내용
+      description: 추가하거나 변경하려는 설정에 대해 작성해 주세요.
+      placeholder: 어떤 설정을 추가하거나 변경하려는지 작성해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: 💡 설정 목적
+      description: 해당 설정이 필요한 이유를 작성해 주세요.
+      placeholder: 해당 설정이 프로젝트에 왜 필요한지 작성해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: ✅ 작업할 내용
+      description: 필요한 작업을 체크리스트 형태로 작성해 주세요.
+      placeholder: |
+        - [ ] 설정 파일 추가
+        - [ ] 필요한 패키지 설치
+        - [ ] 설정 적용 여부 확인
+    validations:
+      required: true
+
+  - type: textarea
+    id: completion
+    attributes:
+      label: 🎯 완료 조건
+      description: 공통 완료 조건을 확인하고, 설정별 완료 조건을 추가해 주세요.
+      value: |
+        - [ ] 설정이 정상적으로 적용된다.
+        - [ ] 프로젝트 실행에 문제가 발생하지 않는다.
+        - [ ] 기존 설정 및 기능에 영향을 주지 않는다.
+        - [ ] 불필요한 설정이나 파일이 포함되지 않았다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: 🙋 참고 자료
+      description: 참고할 공식 문서, 관련 이슈 또는 링크가 있다면 작성해 주세요.
+      placeholder: 관련 문서, 이슈 번호, 링크 등을 작성해 주세요.

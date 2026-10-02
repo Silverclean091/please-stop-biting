@@ -1,0 +1,77 @@
+name: "🐞 BugFix"
+description: "발생한 버그나 오류를 수정합니다."
+title: "[BugFix] "
+labels: ["🐞 BugFix"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 🐞 버그 설명
+      description: 발생한 문제를 구체적으로 작성해 주세요.
+      placeholder: 어떤 상황에서 어떤 문제가 발생하는지 작성해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 🔄 재현 방법
+      description: 버그를 재현할 수 있는 과정을 순서대로 작성해 주세요.
+      placeholder: |
+        1. 프로그램을 실행한다.
+        2. 특정 동작을 수행한다.
+        3. 오류가 발생한다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ 기대 동작
+      description: 정상적인 경우 어떻게 동작해야 하는지 작성해 주세요.
+      placeholder: 정상적으로 기대되는 동작을 작성해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ 실제 동작
+      description: 현재 실제로 발생하고 있는 결과를 작성해 주세요.
+      placeholder: 실제로 발생한 동작이나 오류 메시지를 작성해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: 🔧 작업할 내용
+      description: 버그 수정을 위해 필요한 작업을 체크리스트 형태로 작성해 주세요.
+      placeholder: |
+        - [ ] 원인 파악
+        - [ ] 코드 수정
+        - [ ] 수정 후 재현 테스트
+    validations:
+      required: true
+
+  - type: textarea
+    id: completion
+    attributes:
+      label: 🎯 완료 조건
+      description: 공통 완료 조건을 확인하고, 버그별 완료 조건을 추가해 주세요.
+      value: |
+        - [ ] 동일한 방법으로 버그가 더 이상 재현되지 않는다.
+        - [ ] 기대 동작대로 정상적으로 동작한다.
+        - [ ] 기존 기능에 영향을 주지 않는다.
+        - [ ] 수정 후 직접 실행하여 정상 동작을 확인했다.
+        - [ ] 불필요한 디버그 코드 및 로그를 제거했다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: 🙋 참고 자료
+      description: 오류 로그, 스크린샷, 관련 이슈 또는 참고 자료가 있다면 작성해 주세요.
+      placeholder: 관련 로그, 이미지, 링크 등을 작성해 주세요.
