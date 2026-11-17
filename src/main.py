@@ -7,16 +7,18 @@ def main():
             print("카메라를 열 수 없습니다.")
             return
         print("카메라 연결에 성공했습니다.")
+        print("미리보기 창에서 ESC를 누르면 종료됩니다.")
 
-        ret, frame = cap.read()
-        if not ret:
-            print("카메라 프레임을 읽을 수 없습니다.")
-            return
-    
-        print("카메라 프레임을 성공적으로 읽었습니다.")
-        print(f"프레임 크기: {frame.shape}")
-        cv2.imshow("please-stop-biting", frame)
-        cv2.waitKey(0)
+        while True:
+            ret, frame = cap.read()
+            if not ret:
+                print("카메라 프레임을 읽을 수 없습니다.")
+                break
+        
+            cv2.imshow("please-stop-biting", frame)
+            key = cv2.waitKey(1)
+            if key == 27:  # ESC 키를 누르면 종료
+                break
 
     finally:
         cap.release()
