@@ -32,3 +32,6 @@ htmlcov/
 
 # Local data
 data/
+
+# macOS custom folder icon
+Icon?
